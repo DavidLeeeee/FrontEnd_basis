@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<!-- 문서의 언어를 설정하는 부분. en-US((미국)영어), ko(한국어) -->
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./Style.css" />
+    <title>Basics Of HTML</title>
+  </head>
+
+  <body>
+    <!-- 헤더 -->
+    <header>
+      <img src="../assets/FElogo.svg" width="72px" alt="석희의 프론트엔드" />
+      <ul>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/"><addr>MDN</addr></a>
+        </li>
+        <li><a href="https://github.com/DavidLeeeee">github</a></li>
+        <li><a href="https://www.instagram.com/xuccee/">instagram</a></li>
+      </ul>
+    </header>
+    <!-- 네비게이션 바 -->
+    <nav>
+      <ul>
+        <li>
+          <a href="#introduce">HTML</a>
+        </li>
+        <li><a href="#semantic">Semantic</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#hyperlink">HyperLink</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#AdvancedText">Text</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#info">contact</a></li>
+      </ul>
+    </nav>
+    <!-- 메인 콘텐츠 -->
+    <main>
+      <!-- 최상단 내용물 -->
+      <section id="introduce">
+        <h2>What is <addr>HTML</addr>?</h2>
+        <p>
+          <b>HTML(HyperText Markup Language)</b>은 웹 페이지를 만들기 위한 표준
+          마크업 언어로, 웹 페이지의 구조를 정의합니다.<br />
+          HTML은 <b>요소(element)</b>와 <b>속성(attribute)</b>을 사용하여 문서의
+          구조와 의미를 나타내며, 웹 브라우저가 이를 해석하여 사용자에게
+          표시합니다.<br />
+          HTML은 웹 개발의 기초이며, 다른
+          <b title="CSS, Javascript">웹 기술</b>과 함께 사용되어 동적이고 멋진
+          웹 페이지를 만들 수 있도록 합니다.
+        </p>
+      </section>
+      <hr />
+      <!-- 시맨틱 태그란 -->
+      <section id="semantic">
+        <h2>
+          <dt>Semantic Tag</dt>
+          <dd>_ 의미론적 태그</dd>
+        </h2>
+
+        <article>
+          <h3>의미 전달</h3>
+          <p>
+            시맨틱 태그는 문서의 구조와 콘텐츠를 더 명확하게 표현할 수 있습니다.
+            각각의 태그가 특정한 의미를 갖기 때문에, 코드를 읽는 사람이나
+            검색엔진 등이 쉽게 이해할 수 있습니다.
+          </p>
+        </article>
+        <article>
+          <h3>웹 접근성 향상</h3>
+          <p>
+            시맨틱 태그는 웹 페이지를 보다 접근성 있게 만들어줍니다. 스크린
+            리더와 같은 보조 기술을 사용하는 사용자는 문서의 구조를 이해하고
+            내용에 더 쉽게 접근할 수 있습니다.
+          </p>
+        </article>
+        <article>
+          <h3>검색엔진 최적화(SEO)</h3>
+          <p>
+            시맨틱 태그는 검색엔진이 웹 페이지를 분석할 때 페이지의 구조와
+            내용을 이해하는데 도움을 줍니다. 따라서 올바른 시맨틱 요소를
+            사용하면 검색엔진 최적화에 도움을 줄 수 있습니다.
+          </p>
+        </article>
+        <article>
+          <h3>코드 유지보수 향상</h3>
+          <p>
+            시맨틱 태그를 사용하면 코드의 가독성이 향상되고, 다른 개발자가
+            코드를 이해하고 유지보수하는 데 도움이 됩니다. 또한 스타일과
+            레이아웃을 변경할 때도 더 쉽게 작업할 수 있습니다.
+          </p>
+        </article>
+        <table>
+          <caption>
+            대표적인 시멘틱 태그
+          </caption>
+          <tr>
+            <th>태그</th>
+            <th>의미</th>
+            <th>사용 용도</th>
+          </tr>
+          <tr>
+            <td>&lt;header&gt;</td>
+            <td>헤더 영역을 정의</td>
+            <td>웹 페이지의 머리말, 로고, 탐색 링크 등을 포함</td>
+          </tr>
+          <tr>
+            <td>&lt;nav&gt;</td>
+            <td>내비게이션 링크를 정의하는 컨테이너</td>
+            <td>웹 페이지의 탐색 메뉴를 포함</td>
+          </tr>
+          <tr>
+            <td>&lt;main&gt;</td>
+            <td>문서의 주요 콘텐츠를 정의</td>
+            <td>
+              본문 내용을 포함하며, 헤더, 푸터, 내비게이션을 제외한 모든
+              콘텐츠를 포함
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;section&gt;</td>
+            <td>문서의 일반적인 구분을 정의</td>
+            <td>
+              웹 페이지의 섹션을 나타내며, 헤딩 요소와 함께 사용하여 콘텐츠를
+              그룹화
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;article&gt;</td>
+            <td>독립적인 콘텐츠를 정의</td>
+            <td>블로그 게시물, 뉴스 기사, 댓글 등 독립적인 콘텐츠를 나타냄</td>
+          </tr>
+          <tr>
+            <td>&lt;aside&gt;</td>
+            <td>문서의 별도 콘텐츠를 정의</td>
+            <td>사이드바, 광고, 삽화 등을 포함한 부가적인 콘텐츠를 나타냄</td>
+          </tr>
+          <tr>
+            <td>&lt;footer&gt;</td>
+            <td>문서나 섹션의 푸터를 정의</td>
+            <td>
+              저작권 정보, 연락처, 관련 링크 등을 포함한 섹션의 하단 부분을
+              나타냄
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;figure&gt;</td>
+            <td>그래픽 콘텐츠와 캡션을 그룹화</td>
+            <td>이미지, 도표, 사진, 코드 블록 등과 캡션을 그룹화하여 나타냄</td>
+          </tr>
+          <tr>
+            <td>&lt;time&gt;</td>
+            <td>날짜나 시간을 정의</td>
+            <td>날짜, 시간, 기간, 시간대 등을 정확하게 나타냄</td>
+          </tr>
+        </table>
+      </section>
+      <hr />
+      <!-- 하이퍼링크 -->
+      <section id="hyperlink">
+        <h2>HyperLink</h2>
+        <article id="linkAttribute">
+          <h3>Attributes</h3>
+          <ul>
+            <li>
+              <strong>href:</strong> 링크가 이동할 대상 URL을 지정합니다.
+              <br /><code>ㆍ href="https://naver.com"</code>
+            </li>
+
+            <li>
+              <strong>target:</strong> 링크를 열 위치를 지정합니다. "_blank"는
+              새 창에서 열도록 지정합니다. <br />
+              <code>ㆍ target="_blank/_self/_parent/_top"</code>
+            </li>
+
+            <li>
+              <strong>title:</strong> 링크에 대한 추가 정보를 제공합니다.
+              마우스를 링크 위로 올리면 툴팁으로 표시됩니다. <br />
+              <code>ㆍ title="마우스를 올리면 추가 정보가 표시됩니다"</code>
+            </li>
+            <li>
+              <strong>rel:</strong> 링크의 관계를 지정합니다. 예를 들어
+              "nofollow"는 검색 엔진 로봇에게 해당 링크를 따라가지 말라는 지시를
+              내립니다. <br />
+              <code>ㆍ rel="prev/next/nofollow/noopener/noreferer"</code>
+            </li>
+            <li>
+              <strong>aria-label:</strong> 접근성을 위해 스크린 리더 사용자에게
+              링크의 의미를 설명합니다. <br />
+              <code>ㆍ aria-label="추가 설명을 포함한 링크 텍스트"</code>
+            </li>
+          </ul>
+        </article>
+        <article id="caution">
+          <h3>주의사항</h3>
+          <ul>
+            <li>
+              1. 검색 엔진은 텍스트를 기반으로 색인화하므로 링크 텍스트에
+              <b>키워드를 포함</b>하는 것이 좋다.
+            </li>
+            <li>
+              2. 링크 텍스트는 <b>짧고 간결하게 작성</b>되어야 합니다. 필요한
+              내용만을 담아 사용자에게 명확한 정보를 제공해야 합니다.
+            </li>
+            <li>
+              3.
+              <b>같은 텍스트를 가진 여러 링크는 가독성을 해치므로 피하는 것</b
+              >이 좋습니다.
+            </li>
+            <li>
+              4. 외부 콘텐츠에 대한 링크인 경우,
+              <b>다운로드 파일의 크기나 형식과 같은 정보를 포함</b>시켜
+              사용자에게 미리 알리는 것이 좋습니다.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <hr />
+      <!-- HTML의 구조 -->
+      <section id="structure">
+        <h2>Structure</h2>
+        <ul>
+          <li>
+            <article>
+              <h3>Header</h3>
+              <p>
+                <code>&lt;header&gt;</code> 요소는 일반적으로 내비게이션 링크,
+                로고, 검색 폼 등을 포함하는 소개 콘텐츠를 나타냅니다.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Navigation Bar</h3>
+              <p>
+                <code>&lt;nav&gt;</code> 요소는 내비게이션 링크를 정의하는
+                컨테이너로 사용됩니다.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Main Content</h3>
+              <p>
+                <code>&lt;main&gt;,&lt;section&gt;,&lt;article&gt;</code> 요소는
+                문서의 주요 콘텐츠를 나타내며, 헤더, 푸터, 내비게이션을 제외한
+                콘텐츠를 포함합니다.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Side Bar</h3>
+              <p>
+                <code>&lt;aside&gt;</code> 요소는 메인 콘텐츠 외에 부가적인
+                콘텐츠를 나타내는데 사용되며, 일반적으로 사이드바로 표현됩니다.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Footer</h3>
+              <p>
+                <code>&lt;footer&gt;</code> 저작권, 연락처등을 나타낸다.
+                일반적으로 본문과 관계없는 범용적인 내용을 담지만, SEO를 위해
+                Link를 넣기도 한다.
+              </p>
+            </article>
+          </li>
+        </ul>
+        <article>
+          <h3>참고</h3>
+          <p>
+            <code>&lt;div&gt;</code> 요소는 non-Semantic이므로, 아무런 의미가
+            없습니다. 이러한 이유로 Semantic 태그의 이점을 받지 못하며, 따라서
+            사용을 지양하는 것이 좋습니다.
+          </p>
+        </article>
+      </section>
+      <hr />
+      <!-- 멀티미디어 -->
+      <section id="media">
+        <h2>미디어</h2>
+        <article>
+          <h3>이미지 <code>&lt;img&gt;</code></h3>
+          <dl>
+            <dt>src</dt>
+            <dd>이미지 파일의 경로</dd>
+            <dt>alt</dt>
+            <dd>대체 텍스트</dd>
+            <dt>width</dt>
+            <dd>가로 크기</dd>
+            <dt>height</dt>
+            <dd>세로 크기</dd>
+            <dt>title</dt>
+            <dd>이미지 설명</dd>
+            <dt>srcset</dt>
+            <dd>다양한 해상도의 이미지 경로 지정</dd>
+            <dt>sizes</dt>
+            <dd>이미지 크기 조절 규칙</dd>
+          </dl>
+          <p>사용 시기: 이미지를 웹 페이지에 표시해야 할 때 사용합니다.</p>
+          <h4><strong>참고</strong> 반응형 이미지 구현하기</h4>
+          <ul>
+            <li>
+              <code>&lt;srcset&gt;</code>
+              <p>다양한 해상도의 이미지를 지장한다.</p>
+            </li>
+            <li>
+              <code>&lt;sizes&gt;</code>
+              <p>뷰포트 폭에 따른 이미지 크기를 지정한다.(vw,vh)</p>
+            </li>
+            <li>
+              <code>&lt;picture&gt;</code>
+              <p>서로 다른 레이아웃에 대한 이미지 잘라내기</p>
+            </li>
+          </ul>
+        </article>
+        <article>
+          <article>
+            <h3>그림 <code>&lt;figure&gt;</code></h3>
+            <p>
+              이미지나 삽화, 도표 등의 그래픽 요소를 담기 위한 요소입니다.
+              일반적으로 캡션과 함께 사용됩니다.
+            </p>
+            <p>
+              component: <code>&lt;img&gt;</code> 이미지,
+              <code>&lt;figcaption&gt;</code> 이미와 유의미한 관계의 캡션
+            </p>
+            <p>사용 시기: 이미지나 다른 그래픽 콘텐츠를 담을 때 사용합니다.</p>
+          </article>
+        </article>
+        <article>
+          <h3>비디오 <code>&lt;video&gt;</code></h3>
+          <dl>
+            <dt>src</dt>
+            <dd>비디오 파일의 경로</dd>
+            <dt>controls</dt>
+            <dd>재생 컨트롤 표시 여부</dd>
+            <dt>autoplay</dt>
+            <dd>자동 재생 여부</dd>
+            <dt>loop</dt>
+            <dd>반복 재생 여부</dd>
+            <dt>poster</dt>
+            <dd>비디오 재생 전에 표시되는 이미지 경로</dd>
+            <dt>width</dt>
+            <dd>가로 크기</dd>
+            <dt>height</dt>
+            <dd>세로 크기</dd>
+          </dl>
+          <p>사용 시기: 웹 페이지에 비디오를 표시해야 할 때 사용합니다.</p>
+          <p>
+            비디오에 자막을 제공하려면 <code>&lt;track&gt;</code> 요소를
+            사용하여 자막 파일의 경로를 지정합니다. 이를 통해 다국어 지원이
+            가능하며, 검색 엔진 최적화(SEO)에도 도움이 됩니다.
+          </p>
+          <p>
+            비디오 호환성을 높이기 위해 <code>&lt;source&gt;</code> 요소를
+            사용하여 여러 코덱 및 포맷을 지원할 수 있습니다. 예를 들어, WebM,
+            MP4, Ogg 등의 형식을 모두 제공하여 다양한 브라우저 및 플랫폼에서
+            비디오를 재생할 수 있도록 할 수 있습니다.
+          </p>
+        </article>
+        <article>
+          <h3>아이프레임 <code>&lt;iframe&gt;</code></h3>
+          <dl>
+            <dt>src</dt>
+            <dd>삽입할 외부 웹 페이지의 경로</dd>
+            <dt>width</dt>
+            <dd>가로 크기</dd>
+            <dt>height</dt>
+            <dd>세로 크기</dd>
+            <dt>title</dt>
+            <dd>아이프레임 제목</dd>
+          </dl>
+          <p>
+            사용 시기: 다른 웹 페이지를 현재 페이지에 삽입해야 할 때 사용합니다.
+          </p>
+        </article>
+        <article>
+          <h3>임베드 <code>&lt;embed&gt;</code></h3>
+          <dl>
+            <dt>src</dt>
+            <dd>삽입할 외부 콘텐츠의 경로</dd>
+            <dt>width</dt>
+            <dd>가로 크기</dd>
+            <dt>height</dt>
+            <dd>세로 크기</dd>
+            <dt>type</dt>
+            <dd>삽입할 콘텐츠의 MIME 타입</dd>
+          </dl>
+          <p>
+            사용 시기: 다른 미디어나 플러그인을 현재 페이지에 삽입해야 할 때
+            사용합니다.
+          </p>
+        </article>
+        <article>
+          <h3>오브젝트 <code>&lt;object&gt;</code></h3>
+          <dl>
+            <dt>data</dt>
+            <dd>삽입할 외부 콘텐츠의 경로</dd>
+            <dt>type</dt>
+            <dd>삽입할 콘텐츠의 MIME 타입</dd>
+            <dt>width</dt>
+            <dd>가로 크기</dd>
+            <dt>height</dt>
+            <dd>세로 크기</dd>
+          </dl>
+          <p>
+            사용 시기: 다른 미디어나 플래시 애니메이션 등을 현재 페이지에
+            삽입해야 할 때 사용합니다.
+          </p>
+        </article>
+        <article>
+          <h3>멀티미디어에서 SEO를 향상시키기 위해 해야할 것</h3>
+          <ul>
+            <li>
+              <h4>img에 대체텍스트(alt)를 추가한다.</h4>
+              <p>
+                웹크롤러는 이미지 내용을 이해하기 위하여 대체 텍스트를 빠르게
+                읽는다.
+              </p>
+            </li>
+            <li>
+              <h4>video의 자막(track)을 설정한다.</h4>
+              <p>
+                자막을 지정함으로서 영상 내용 텍스트가 생기고, 다국어를 지원할
+                수도 있다.
+              </p>
+            </li>
+            <li>
+              <h4>svg파일을 사용한다.</h4>
+              <p>
+                vertor image의 Text는 접근가능한 상태로 남아 SEO에 좋다. 다만
+                vector는 알고리즘을 이용해 이미지를 그리기에, 복잡도에 따라
+                부하가 크다.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <hr />
+      <!-- Advanced Text -->
+      <section id="AdvancedText">
+        <h2>Text</h2>
+        <article>
+          <h3>Block-level Elements</h3>
+          <p>
+            블록 수준 요소는 한 줄을 차지하고 다음 요소는 새로운 줄에
+            배치됩니다. 일반적으로 부모 요소의 전체 너비를 차지하며, 블록 수준
+            요소 내에 다른 블록 수준 요소나 인라인 요소가 올 수 있습니다.
+          </p>
+          <ul>
+            <li><code>&lt;p&gt;</code>: 단락을 나타냅니다.</li>
+            <li>
+              <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>: 제목을
+              나타냅니다. h1부터 h6까지 있으며, 숫자가 클수록 중요도가 낮습니다.
+            </li>
+            <li>
+              <code>&lt;blockquote&gt;</code>:
+              <blockquote cite="naver.com">
+                <q>인용문을 감싸는 블럭</q>
+              </blockquote>
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>Inline Elements</h3>
+          <p>
+            인라인 요소는 문장 안에서 다른 요소와 함께 사용될 수 있으며, 새로운
+            줄에 시작하지 않습니다. 일반적으로 부모 요소의 너비를 차지하지
+            않으며, 다른 인라인 요소나 텍스트와 함께 배치됩니다.
+          </p>
+          <p>주요 인라인 요소:</p>
+          <ul>
+            <li><code>&lt;strong&gt;</code>: <strong>강조 텍스트</strong></li>
+
+            <li><code>&lt;em&gt;</code>: <em>Italic 텍스트</em></li>
+            <li><code>&lt;a&gt;</code>: <a>하이퍼링크</a></li>
+            <li><code>&lt;span&gt;</code>: <span>인라인 컨테이너</span></li>
+
+            <li><code>&lt;cite&gt;</code>: <cite>인용문의 제목</cite></li>
+            <li><code>&lt;q&gt;</code>: <q>인용된 텍스트</q></li>
+            <li><code>&lt;i&gt;</code>: <i>이탤릭체</i></li>
+            <li><code>&lt;b&gt;</code>: <b>굵은 텍스트</b></li>
+            <li><code>&lt;u&gt;</code>: <u>밑줄 텍스트</u></li>
+            <li><code>&lt;small&gt;</code>: <small>작은 텍스트</small></li>
+            <li><code>&lt;sup&gt;</code>: 윗<sup>첨자</sup></li>
+            <li><code>&lt;sub&gt;</code>: 아래<sub>첨자</sub></li>
+            <li><code>&lt;abbr&gt;</code>: <addr>약어</addr></li>
+            <li><code>&lt;time&gt;</code>: <time>시간</time></li>
+            <li><code>&lt;del&gt;</code>: <del>삭제된 텍스트</del></li>
+            <li><code>&lt;ins&gt;</code>: <ins>추가된 텍스트</ins></li>
+            <li><code>&lt;mark&gt;</code>: <mark>하이라이트</mark></li>
+            <li><code>&lt;code&gt;</code>: <code>코드 조각</code></li>
+            <li><code>&lt;var&gt;</code>: <var>x</var> + <var>y</var></li>
+            <li><code>&lt;kbd&gt;</code>: <kbd>Ctrl</kbd>+<kbd>Alt</kbd></li>
+            <li><code>&lt;samp&gt;</code>: <samp>"Hello World"</samp></li>
+          </ul>
+        </article>
+        <article>
+          <h3>참고 : 그 외의 인라인 요소들</h3>
+          <ul>
+            <li><code>&lt;img&gt;</code>: 이미지</li>
+            <li><code>&lt;br&gt;</code>: 줄 바꿈 <br /></li>
+            <li><code>&lt;input&gt;</code>: 입력 필드 <input /></li>
+            <li><code>&lt;label&gt;</code>: <label>입력 필드의 라벨</label></li>
+            <li><code>&lt;button&gt;</code>: <button>버튼</button></li>
+            <li>
+              <code>&lt;select&gt;</code>:
+              <select>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Javascript">Javascript</option>
+              </select>
+            </li>
+            <li>
+              <code>&lt;textarea&gt;</code>:
+              <textarea
+                name="textinput"
+                cols="40"
+                rows="2"
+                style="resize: none"
+              >
+여러 줄의 텍스트 입력 필드</textarea
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+      <hr />
+      <!-- Table -->
+      <section id="table">
+        <h2>Table</h2>
+        <article>
+          <h3>테이블 생성하기</h3>
+          <p>
+            HTML에서 테이블을 생성하는 가장 기본적인 요소는
+            <code>&lt;table&gt;</code>입니다. 테이블은 행과 열의 직사각형 형태로
+            데이터를 구성합니다.
+          </p>
+          <p>테이블은 다음과 같은 요소로 구성됩니다:</p>
+          <ul>
+            <li><code>&lt;table&gt;</code>: 전체 테이블을 정의합니다.</li>
+            <li><code>&lt;tr&gt;</code>: 각각의 행을 정의합니다.</li>
+            <li><code>&lt;td&gt;</code>: 각각의 데이터 셀을 정의합니다.</li>
+            <li>
+              <code>&lt;th&gt;</code>: 각각의 헤더 셀을 정의합니다.
+              (<code>&lt;td&gt;</code>와 비슷하지만 헤더 역할을 합니다.)
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>테이블 유형</h3>
+          <p>테이블은 주로 두 가지 유형으로 사용됩니다:</p>
+          <ul>
+            <li>데이터 테이블: 실제 데이터를 나타내는 데 사용됩니다.</li>
+            <li>
+              레이아웃 테이블: 웹 페이지의 레이아웃을 구성하는 데 사용됩니다.
+              이는 CSS를 사용하여 레이아웃을 구성하는 것이 일반적이며, 테이블을
+              사용하는 것은 권장되지 않습니다.
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>간단한 예제 테이블</h3>
+          <p>아래는 데이터 테이블과 레이아웃 테이블의 간단한 예제입니다:</p>
+          <h4>1. 데이터 테이블</h4>
+          <table>
+            <caption>
+              [학생 성적표]
+            </caption>
+            <tr>
+              <th>언어</th>
+              <th>용도</th>
+              <th>점수</th>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td>웹 뼈대 생성</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>웹 스타일 생성</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>JS</td>
+              <td>웹 동적요소</td>
+              <td>80</td>
+            </tr>
+          </table>
+          <h4>2. 레이아웃 테이블</h4>
+          <table>
+            <caption>
+              [colspan사용]
+            </caption>
+            <tr>
+              <td>메뉴 1</td>
+              <td>메뉴 2</td>
+              <td>메뉴 3</td>
+            </tr>
+            <tr>
+              <td colspan="3">컨텐츠 영역</td>
+            </tr>
+            <tr>
+              <td colspan="2">사이드바</td>
+              <td>광고</td>
+            </tr>
+          </table>
+        </article>
+      </section>
+      <hr />
+      <!-- SEO를 위한 방향성 -->
+      <section id="seo">
+        <h2>SEO를 향상시키는 방법</h2>
+        <article>
+          <h3>큰 범위에서의 SEO 향상</h3>
+          <ul>
+            <li>
+              <h3>고품질 콘텐츠 제공</h3>
+              <p>
+                관련성 높은 주제에 대해 깊이 있는 콘텐츠를 작성하여 정보를
+                제공하는 동시에 유용한 해결책을 제시합니다.
+              </p>
+            </li>
+            <li>
+              <h3>키워드 최적화</h3>
+              <p>
+                키워드를 사용자에게 자연스럽게 보이는 위치에 삽입하고, 제목,
+                메타 설명, 헤딩 태그 등에 키워드를 포함합니다.
+              </p>
+            </li>
+            <li>
+              <h3>링크 구조 최적화</h3>
+              <p>
+                내부 링크를 적극적으로 활용하여 웹 사이트의 페이지 간 연결성을
+                강화하고, 사용자 경로를 고려하여 사용자가 필요로 하는 정보로
+                유도합니다.
+              </p>
+            </li>
+            <li>
+              <h3>모바일 최적화</h3>
+              <p>
+                반응형 또는 모바일 친화적인 디자인을 구현하고, 모바일 속도
+                최적화를 위한 이미지 최적화 및 리소스 압축을 수행합니다.
+              </p>
+            </li>
+            <li>
+              <h3>사이트 속도 최적화</h3>
+              <p>
+                이미지 최적화, CDN(Content Delivery Network) 도입, 캐싱 정책
+                구현 등을 통해 사이트 속도를 최적화합니다.
+              </p>
+            </li>
+            <li>
+              <h3>메타 데이터 최적화</h3>
+              <p>
+                각 페이지에 메타 태그를 추가하고, 제목과 설명을 정확하게
+                작성하여 검색 결과에 표시될 수 있도록 합니다.
+              </p>
+            </li>
+            <li>
+              <h3>사이트맵 제출</h3>
+              <p>
+                XML 사이트맵을 생성하여 검색 엔진에 제출하여 모든 페이지가
+                인덱싱되고 검색 결과에 포함될 수 있도록 합니다.
+              </p>
+            </li>
+            <li>
+              <h3>소셜 미디어 활용</h3>
+              <p>
+                콘텐츠를 소셜 미디어에 공유하기 쉽도록 소셜 미디어 공유 버튼을
+                추가하고, 소셜 미디어 플랫폼에서 활발한 활동을 합니다.
+              </p>
+            </li>
+            <li>
+              <h3>로컬 SEO</h3>
+              <p>
+                로컬 비즈니스 디렉토리에 등록하고, 지역 키워드를 타겟팅하는
+                콘텐츠를 제작하여 로컬 SEO를 강화합니다.
+              </p>
+            </li>
+            <li>
+              <h3>유저 경험 최적화</h3>
+              <p>
+                사이트 내비게이션의 단순화 및 향상을 통해 사용자 경로를
+                최적화하고, 페이지 로딩 시간을 단축합니다.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <h2>Contact</h2>
+        <p>Email: dltjrgml127@naver.com</p>
+        <p>Phone: 010-####-####</p>
+      </section>
+      <section>
+        <h2>Links</h2>
+        <ul>
+          <li>
+            <a href="/HTML/Home.html">only<abbr> HTML</abbr></a>
+          </li>
+          <li>
+            <a href="../HTML_with_CSS/Home.html"
+              ><abbr>HTML</abbr> with <abbr>CSS</abbr></a
+            >
+          </li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Copyright</h2>
+        <p>&copy; 2024 Seokhee's CP. All rights reserved.</p>
+      </section>
+      <address>
+        Seokhee's CP<br />
+        Seoul, Korea
+      </address>
+    </footer>
+  </body>
+</html>
