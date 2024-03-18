@@ -1,0 +1,178 @@
+h1 {
+  display: flex;
+  margin: auto;
+  margin-top: 60px;
+  background-color: #ebebeb;
+  color: #171717;
+  width: 30%;
+  min-width: 200px;
+  border-radius: 32px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 1.2rem;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ******************************* */
+#ColorChoice {
+  display: flex;
+  align-items: center;
+}
+#ColorChoice #Blacks,
+#ColorChoice #Whites {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 0 0 10px;
+  border-radius: 25px;
+  background-color: rgb(236, 236, 236);
+}
+#ColorChoice p {
+  padding: 0;
+  margin: 0;
+  writing-mode: vertical-rl; /* 텍스트를 세로로 길게 쓰도록 설정 */
+  text-align: center; /* 가운데 정렬 */
+  white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정 */
+}
+#ColorChoice article div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin: 12px 10px;
+}
+#ColorChoice article div span {
+  font-size: 0.8em;
+  color: #faffff;
+}
+#ColorChoice #Whites div span {
+  color: #2c2c2c; /* 글자 색을 검정으로 설정합니다. */
+}
+
+/* ******************************* */
+
+#ColorGuide {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#ColorGuide img {
+  width: 360px;
+  height: 280px;
+  margin: 0 0 20px 0;
+}
+#ColorSymbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  min-width: 280px;
+  flex-wrap: wrap;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+#ColorSymbol div {
+  width: 20%-2px;
+  min-width: 100px;
+  padding: 30px 5px 30px 5px;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+#ColorSymbol div:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+#ColorSymbol div p {
+  color: #faffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#ColorSymbol div li {
+  color: #faffff;
+  font-size: 0.6rem;
+  font-weight: 500;
+  margin-left: 8px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+#rule603010 {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  background-color: #fff;
+}
+
+.rulebox {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+}
+#rule60 {
+  display: flex;
+  width: 45%;
+  min-width: 260px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#rule30 {
+  display: flex;
+  width: 30%;
+  min-width: 260px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#rule10 {
+  display: flex;
+  width: 10%;
+  min-width: 110px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#rule301 {
+  background-color: #3554e7;
+}
+#rule302 {
+  background-color: #d7defa;
+}
+#rule303 {
+  background-color: #f5f9ff;
+}
+#rule60 .round {
+  background-color: #ffffff;
+}
+#rule10 .round {
+  background-color: #80f4d9;
+}
+.round {
+  display: flex;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 0.7rem;
+  justify-content: center; /* 가로 가운데 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+  transition: all 0.3s ease;
+}
+#rule603010 .rulebox :hover {
+  transform: scale(1.1); /* hover 상태일 때 크기 조정 */
+}

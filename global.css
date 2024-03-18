@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  list-style-type: none;
+  cursor: default; /* 기본 화살표 커서 */
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+* a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  max-width: 1600px;
+  margin: auto;
+}
+
+section {
+  background-color: #fff;
+  padding: 20px;
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  color: #666;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+b {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+hr {
+  border: none; /* 기본 테두리 제거 */
+  margin: 30px 1%;
+  background-color: rgba(0, 0, 0, 0.1); /* 배경색을 빨간색으로 설정 */
+  height: 0.5px; /* hr의 높이 설정 */
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 20px;
+  overflow: hidden;
+}
+header * {
+  font-size: 0.6rem;
+  display: flex;
+}
+header img {
+  margin-right: 40px;
+}
+header a {
+  margin: 0 20px;
+  font-weight: 500;
+  color: rgb(100, 100, 100);
+  transition: color 0.5s ease;
+}
+header a:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* 초기에는 메뉴 아이콘을 숨김 */
+.menu-icon {
+  display: none;
+}
+/* 네비게이션 바 */
+nav {
+  overflow: hidden;
+  padding: 0 16px;
+  background-color: rgb(20, 20, 20);
+  height: 40px;
+  position: relative; /* 자식 요소의 위치를 상대적으로 설정합니다. */
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul * {
+  font-size: 0.85em;
+  margin: 4px 8px;
+}
+
+nav ul * {
+  display: block; /* 네비게이션 요소들을 수평으로 정렬하기 위해 */
+  justify-content: center;
+  align-items: center; /* 세로로 중앙 정렬 */
+}
+nav li:last-child {
+  margin-left: auto;
+}
+nav a {
+  color: white;
+}
+nav li:hover {
+  border-bottom: 1px solid #007bff;
+}

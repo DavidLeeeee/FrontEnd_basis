@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  list-style-type: none;
+  cursor: default; /* 기본 화살표 커서 */
+  user-select: none;
+}
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+* a {
+  text-decoration: none;
+}
+
+section {
+  background-color: #fff;
+  padding: 30px 20px 40px 20px;
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 헤더 */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 20px;
+  overflow: hidden;
+}
+
+header * {
+  font-size: 0.6rem;
+  display: flex;
+}
+header img {
+  margin-right: 40px;
+}
+header a {
+  margin: 0 18px;
+  font-weight: 500;
+  color: rgb(100, 100, 100);
+  transition: color 0.5s ease;
+}
+header a:hover {
+  color: rgb(0, 0, 0);
+}
+/* 네비게이션 바 */
+nav {
+  padding: 0 16px;
+  background-color: rgb(20, 20, 20);
+  height: 40px;
+  position: relative; /* 자식 요소의 위치를 상대적으로 설정합니다. */
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul * {
+  font-size: 0.85em;
+  margin: 4px 8px;
+}
+
+nav ul * {
+  display: block; /* 네비게이션 요소들을 수평으로 정렬하기 위해 */
+  justify-content: center;
+  align-items: center; /* 세로로 중앙 정렬 */
+}
+nav li:last-child {
+  margin-left: auto;
+}
+nav a {
+  color: white;
+}
+nav li:hover {
+  border-bottom: 1px solid #007bff;
+}

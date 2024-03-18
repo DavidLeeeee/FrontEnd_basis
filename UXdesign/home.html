@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>UX/UI</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1124abb105.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./Colors.css" />
+    <link rel="stylesheet" href="./Laws.css" />
+    <script src="./uxStyle.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="../assets/FElogo.svg" width="72px" alt="석희의 프론트엔드" />
+      <ul>
+        <li>
+          <a href="../Home.html"><addr>HTML/CSS</addr></a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/"><addr>MDN</addr></a>
+        </li>
+        <li><a href="https://github.com/DavidLeeeee">github</a></li>
+        <li><a href="https://www.instagram.com/xuccee/">instagram</a></li>
+      </ul>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#LinkLaws">Laws</a></li>
+        <li>
+          <a href="#LinkColor">Colors</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Laws -->
+    <h1 id="LinkLaws">Laws of UX</h1>
+    <section id="Laws">
+      <article>
+        <h2>Laws of Similarity</h2>
+        <h3><p>Group Pattern</p></h3>
+        <div id="RowOuterBox">
+          <div id="SimilarGroupBox">
+            <div id="Similarcircle"><div id="smallcircle"></div></div>
+            <span id="circlename">xuccee</span>
+          </div>
+          <div id="SimilarGroupBox">
+            <div id="Similarcircle"><div id="smallcircle"></div></div>
+            <span id="circlename">sakki</span>
+          </div>
+          <div id="SimilarGroupBox">
+            <div id="Similarcircle"><div id="smallcircle"></div></div>
+            <span id="circlename">suzu</span>
+          </div>
+          <div id="SimilarGroupBox">
+            <div id="Similarcircle"><div id="smallcircle"></div></div>
+            <span id="circlename">hiroshi</span>
+          </div>
+        </div>
+      </article>
+      <article>
+        <h2>Zeigarnik Effect</h2>
+        <h3><p>Remember Uncompleted</p></h3>
+        <div id="ColOuterBox">
+          <div class="gauge-bar">
+            <div class="filler" style="width: 100%"></div>
+          </div>
+          <div class="gauge-bar">
+            <div class="filler" style="width: 100%"></div>
+          </div>
+          <div class="gauge-bar">
+            <div class="filler" style="width: 70%"></div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <h2>Von Restorff Effect</h2>
+        <h3><p>One differ Remains</p></h3>
+        <div id="ColOuterBox">
+          <div class="rowBox">
+            <div class="Differ"><span>BEAUTY</span></div>
+            <div class="Differ"><span>OUTLET</span></div>
+            <div class="Differ Differ1"><span>EVENT</span></div>
+            <div class="Differ"><span>SNKR</span></div>
+          </div>
+          <div class="rowBox">
+            <div class="Differ"><span>SHOW</span></div>
+            <div class="Differ"><span>PLAY</span></div>
+            <div class="Differ"><span>KIDS</span></div>
+            <div class="Differ"><span>RANK</span></div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <h2>Hick's Law</h2>
+        <h3><p>Less Options to Choose</p></h3>
+        <div id="ColOuterBox">
+          <div class="rowBox">
+            <div class="Hicks"><span>Option A</span></div>
+            <div class="Hicks"><span>Option B</span></div>
+            <div class="Hicks"><span>Option C</span></div>
+          </div>
+          <div class="rowBox">
+            <div class="HicksN"><span>Option D</span></div>
+            <div class="HicksN"><span>Option E</span></div>
+            <div class="HicksN"><span>Option F</span></div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <h2>Peak-End Rule</h2>
+        <h3><p>Judge at Peak-End</p></h3>
+        <div id="RowOuterBox">
+          <svg id="graphBox" width="300" height="180"></svg>
+        </div>
+      </article>
+      <article>
+        <h2>Jacob's Law</h2>
+        <h3><p>Similarity</p></h3>
+        <div id="RowOuterBox">
+          <img
+            src="../assets//netflix.PNG"
+            width="120px"
+            style="margin: 20px"
+          />
+          <img src="../assets//laftel.PNG" width="120px" style="margin: 20px" />
+        </div>
+      </article>
+      <article>
+        <h2>Miller's Law</h2>
+        <h3><p>Chunking / Categorize</p></h3>
+        <div id="ColOuterBox">
+          <div class="rowBox">
+            <div class="Categorie">
+              <span>뉴스</span>
+              <div class="lineBox"></div>
+            </div>
+            <div class="Categorie">
+              <span>쇼핑</span>
+              <div class="lineBox"></div>
+            </div>
+          </div>
+          <div class="rowBox">
+            <div class="Categorie">
+              <span>카테고리</span>
+              <div class="lineBox"></div>
+            </div>
+            <div class="Categorie">
+              <span>검색</span>
+              <div class="lineBox"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <h2>Parkinson's Law</h2>
+        <h3><p>Shorten Motions</p></h3>
+        <div id="ColOuterBox">
+          <div class="searchBox Topsearchbox">
+            <i class="fa-solid fa-magnifying-glass"></i><span>남자 ㅇ</span>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="searchBox">
+            <span>남자 옷</span><i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="searchBox">
+            <span>남자 염색</span><i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="searchBox">
+            <span>남자 아우터</span><i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+      </article>
+      <article>
+        <h2>Occam's Razor</h2>
+        <h3><p>Razor Unnecessary</p></h3>
+        <div id="RowOuterBox" style="justify-content: space-around">
+          <div class="colBox Raz">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="RazorBox">남은 잔액 : 10,150$</div>
+            <div class="RazorBox">앞으로 받을 금액 : 1$</div>
+          </div>
+          <div class="colBox Raz">
+            <i class="fa-solid fa-check"></i>
+            <div class="RazorBox">잔액 : 10,150$</div>
+            <div class="RazorBox">받을 금액 : 1$</div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <h2>Pareto Principle</h2>
+        <h3><p>20% makes 80% result</p></h3>
+        <div class="rowBox">
+          <canvas id="myBarChart" width="300" height="200"></canvas>
+        </div>
+      </article>
+      <article>
+        <h2>Postel's Law</h2>
+        <h3><p>Be Strict On Self</p></h3>
+        <div id="OuterBox">
+          <div class="colBox postelbox">
+            <div class="posteldelete">데이터를 삭제하시겠습니까?</div>
+            <span>삭제한 데이터는 복구할 수 없습니다</span>
+            <div class="rowBox">
+              <button class="Button quit">돌아가기</button>
+              <button class="Button delete">삭제하기</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <h2>Goal-Gradient Effect</h2>
+        <h3><p>Progressively Reaching</p></h3>
+        <div id="OuterBox">
+          <div class="rowBox" style="margin-top: 40px">
+            <div class="progressBox">START</div>
+            <div class="progressBox"></div>
+            <div class="progressBox"></div>
+            <div class="progressBox"></div>
+            <div class="progressBox">END</div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- Color Guide -->
+    <h1 id="LinkColor">Color Guide</h1>
+    <section id="ColorChoice">
+      <article id="Blacks"></article>
+      <p>Black Options</p>
+      <article id="Whites"></article>
+      <p>White Options</p>
+    </section>
+    <section id="ColorMean">
+      <article id="ColorGuide">
+        <img
+          src="https://assets.toptal.io/images?url=https%3A%2F%2Fuploads.toptal.io%2Fblog%2Fimage%2F126878%2Ftoptal-blog-image-1534361167527-5d50bd32f8e5ebacc10f46985f25995a.jpg"
+          alt="The Psychology of Color"
+        />
+        <div id="ColorSymbol"></div>
+      </article>
+    </section>
+    <section id="ColorPercent">
+      <article id="rule603010">
+        <div class="rulebox">
+          <div id="rule60">
+            <div class="round">#FFFFFF</div>
+          </div>
+          <div id="rule30">
+            <div id="rule301" class="round">#3554E7</div>
+            <div id="rule302" class="round">#D7DEFA</div>
+            <div id="rule303" class="round">#F5F9FF</div>
+          </div>
+          <div id="rule10"><div class="round">#80F4D9</div></div>
+        </div>
+      </article>
+    </section>
+    <section id="ColorFromNature">
+      <img
+        src="https://miro.medium.com/v2/resize:fit:2000/format:webp/1*Vos24Gsm7Zr724Z_Umnqwg.png"
+        width="100%"
+      />
+      <img
+        src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*TqjG7qfhaZwOMue5QWTRcA.png"
+        width="100%"
+      />
+    </section>
+    <section id="cardnews"></section>
+  </body>
+</html>

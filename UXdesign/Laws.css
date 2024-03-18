@@ -1,0 +1,399 @@
+#RowOuterBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px; /* article 높이에서 h의 높이를 빼서 사용합니다. */
+}
+#ColOuterBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px; /* article 높이에서 h의 높이를 빼서 사용합니다. */
+}
+.rowBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.colBox {
+  display: flex;
+  flex-direction: column;
+}
+#Laws {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#Laws article {
+  margin: 12px 1%;
+  width: 48%;
+  height: 240px;
+  min-width: 330px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+#Laws article h2 {
+  text-align: center;
+  padding: 5px;
+  background-color: #0d1717;
+  color: #fcf5e5;
+}
+#Laws article h3 {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  margin: 8px auto;
+  padding: 2px;
+}
+#Laws article p {
+  color: #363431;
+  padding: 0 10px;
+  text-align: center;
+  border-left: 4px solid #26582c;
+  border-right: 4px solid #26582c;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+#SimilarGroupBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  width: 25%;
+  height: 100%;
+}
+#Similarcircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+#smallcircle {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-image: url("../assets/버나지.png");
+  background-size: cover; /* 이미지가 요소의 크기에 맞게 조정되도록 합니다 */
+  background-position: center; /* 이미지가 요소의 중앙에 위치하도록 합니다 */
+  background-repeat: no-repeat; /* 이미지가 반복되지 않도록 합니다 */
+  overflow: hidden; /* 넘치는 부분을 잘라냅니다 */
+  background-color: #222;
+}
+#circlename {
+  font-size: 0.7rem;
+}
+
+.gauge-bar {
+  width: 80%; /* 전체 게이지바의 너비 */
+  height: 14px; /* 게이지바의 높이 */
+  margin-bottom: 10px; /* 게이지바 사이의 간격 */
+  background-color: #eee; /* 게이지바의 배경색 */
+  border-radius: 20px;
+}
+@keyframes movingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+.filler {
+  height: 100%; /* 부모 요소(gauge-bar)와 동일한 높이를 갖도록 설정 */
+  background-color: rgb(48, 141, 255); /* 첫 번째와 두 번째 게이지바의 색상 */
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 110, 255) 0%,
+    rgba(0, 150, 255, 1) 25%,
+    rgba(0, 190, 255, 1) 50%,
+    rgba(0, 150, 255, 1) 75%,
+    rgba(0, 110, 255) 100%
+  );
+  background-size: 200% 100%;
+  animation: movingGradient 3s linear infinite;
+}
+.gauge-bar:last-child .filler {
+  background-color: red; /* 마지막 게이지바의 색상 변경 */
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 50, 0, 1) 25%,
+    rgb(255, 105, 75) 50%,
+    rgb(255, 50, 0) 75%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  background-size: 200% 100%;
+  animation: movingGradient 3s linear infinite;
+}
+
+.Differ {
+  display: flex; /* Flexbox 레이아웃을 사용 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  text-align: center;
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background-color: rgba(230, 230, 230, 0.4);
+}
+.Differ span {
+  font-size: 0.55rem;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Differ:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px rgba(70, 70, 70, 0.2);
+}
+.Differ1 {
+  background-color: #222;
+}
+.Differ1 span {
+  color: #eee;
+}
+
+.Hicks {
+  display: flex; /* Flexbox 레이아웃을 사용 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  width: 80px;
+  border-radius: 24px;
+  background: linear-gradient(
+    to right,
+    #6ee7b7,
+    #3b82f6
+  ); /* 밝은 그린-블루 그라데이션 */
+  color: white; /* 텍스트 색상 */
+}
+.Hicks span {
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Hicks:hover {
+  animation: scaleAndGlow 1s forwards, pop 1.01s forwards;
+}
+
+@keyframes scaleAndGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 214, 11, 0.5);
+  }
+  100% {
+    transform: scale(1.08);
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0); /* fadeout */
+  }
+}
+@keyframes pop {
+  99.99% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1.085);
+  }
+}
+
+.HicksN {
+  background: linear-gradient(
+    to right,
+    #4b5563,
+    #1f2937
+  ); /* 어두운 그레이 그라데이션 */
+  color: #9ca3af; /* 텍스트 색상 */
+  text-decoration: line-through; /* 중간선 긋기 */
+  display: flex; /* Flexbox 레이아웃을 사용 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  width: 80px;
+  border-radius: 24px;
+  background-color: rgba(230, 230, 230, 0.4);
+  transition: transform 0.3s ease;
+}
+.HicksN span {
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.HicksN:hover {
+  animation: shake 0.5s ease infinite; /* 마우스 호버 시 'shake' 애니메이션 적용 */
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: scale(0.95) rotate(-1.5deg);
+  }
+  50% {
+    transform: scale(0.95) rotate(1.5deg);
+  }
+}
+
+.Categorie {
+  width: 100px;
+  height: 60px;
+  margin: 10px;
+  padding: 0 16px;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+  border: 1px solid #1f2937;
+}
+.lineBox {
+  width: 100px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #000000,
+    #000000 1px,
+    transparent 1px,
+    transparent 5px
+  );
+}
+.Categorie::after {
+  content: "";
+  width: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    #000,
+    #000 2px,
+    transparent 2px,
+    transparent 10px
+  );
+  /* 선의 색상, 선의 너비, 선 사이의 간격 조정 가능 */
+}
+.Categorie span {
+  font-size: 0.8rem;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-top: 0px;
+}
+.Topsearchbox {
+  width: 278px;
+  border: 2px solid #bbb;
+}
+.searchBox span {
+  margin-left: 20px;
+  font-size: 0.8rem;
+  margin-right: auto;
+}
+.Topsearchbox span {
+  margin-left: 0px;
+}
+.searchBox i {
+  margin: 0 10px;
+  font-size: 16px; /* 원하는 크기로 조절 */
+}
+
+.RazorBox {
+  width: 120px;
+  border-radius: 16px;
+  margin: 12px 0;
+  padding: 4px 8px;
+  font-size: 0.5rem;
+  color: #ffffff;
+  background: linear-gradient(to right, #3e21f9, #5594f9);
+}
+.fa-xmark {
+  font-size: 24px;
+  color: red; /* 빨간색으로 설정 */
+  margin-left: 4px; /* 오른쪽으로 조금 더 이동 */
+}
+
+.fa-check {
+  font-size: 24px;
+  color: limegreen; /* 초록색으로 설정 */
+  margin-left: 4px; /* 오른쪽으로 조금 더 이동 */
+}
+.postelbox {
+  text-align: center;
+  margin: auto;
+  padding: 20px 10px 10px 10px;
+  width: 260px;
+  height: 100px;
+  border-radius: 12px;
+  background-color: rgba(200, 200, 200, 0.1);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+}
+.posteldelete {
+  font-size: 0.7rem;
+}
+.postelbox span {
+  font-size: 0.45rem;
+  margin: 8px 0 12px 0;
+}
+.Button {
+  width: 100px;
+  border-radius: 20px;
+  text-align: center;
+  border: 0px;
+  padding: 8px 2px;
+  font-size: 0.6rem;
+  color: #f4f4f4;
+}
+.quit {
+  background-color: #1f2937;
+}
+.delete {
+  background-color: rgb(255, 50, 0);
+}
+.delete:hover {
+  background-color: rgb(219, 44, 0);
+}
+
+.progressBox {
+  writing-mode: vertical-lr; /* 텍스트 세로 방향으로 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  width: 30px;
+  height: 100px;
+  margin: auto;
+  color: #153232;
+}
+/* 각 박스에 대한 투명도 설정 */
+.progressBox:nth-child(1) {
+  background-color: rgba(0, 190, 255, 0.1);
+}
+.progressBox:nth-child(2) {
+  background-color: rgba(0, 190, 255, 0.3);
+}
+.progressBox:nth-child(3) {
+  background-color: rgba(0, 190, 255, 0.5);
+}
+.progressBox:nth-child(4) {
+  background-color: rgba(0, 190, 255, 0.7);
+}
+.progressBox:nth-child(5) {
+  background-color: rgba(0, 190, 255, 0.9);
+}
